@@ -1,41 +1,39 @@
-const path = require('path');
+"use strict";
+
+const path = require("path");
+const HTMLPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: 'production',
-  entry: {
-    core: './src/core.ts',
-    enzyme: './src/enzyme.ts',
-    prettify: './src/prettify.ts',
-  },
-  devServer: {
-    contentBase: [
-      path.join(__dirname, 'examples'),
-      path.join(__dirname, 'dist'),
-    ],
-    compress: true,
-    port: 9000,
-  },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
-        sideEffects: false,
-        exclude: /node_modules/,
+        use: {
+          loader: "ts-loader",
+          options: {
+            transpileOnly: true,
+          },
+        },
       },
     ],
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: [".js", ".ts"],
   },
+  node: {
+    fs: "empty",
+    module: "empty",
+  },
+  plugins: [
+    new HTMLPlugin({
+      template: path.join(__dirname, "example/index.html"),
+    }),
+  ],
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: '[name].js',
-    library: ['jestLite', '[name]'],
+    filename: `[name].min.js`,
+    library: '',
+    libraryExport: '',
     libraryTarget: 'umd',
-  },
-  externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-  },
+    globalObject: 'this',
+  }
 };

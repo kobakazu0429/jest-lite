@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jest Lite</title>
+    <link rel="stylesheet" href="../src/prettify.css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    const { describe, it, expect, run } = core;
+
+    function sum(a, b) {
+      return a + b;
+    }
+
+    describe("sum(a, b)", () => {
+      it("sum(1, 2) should be 3", () => {
+        expect(sum(1, 2)).toBe(3);
+      });
+
+      it("sum(1, -1) should be 0", () => {
+        expect(sum(1, -1)).toBe(0);
+      });
+    });
+
+    prettify.toHTML(run(), document.body);
+  </script>
+</html>
