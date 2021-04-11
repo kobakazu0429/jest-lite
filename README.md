@@ -7,6 +7,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+Thanks [kvendrik/jest-lite](https://github.com/kvendrik/jest-lite)
+
 Run [Jest](https://jestjs.io/) in the browser.
 
 [<img src="https://github.com/kvendrik/jest-lite/raw/master/preview.png" width="100%" />](https://codepen.io/kvendrik/pen/QeWLMV)

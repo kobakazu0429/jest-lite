@@ -1,11 +1,11 @@
 {
   "name": "jest-lite",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.1",
   "description": "Run Jest in the browser",
-  "main": "dist/index.js",
+  "main": "dist/main.min.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kvendrik/jest-lite.git"
+    "url": "https://github.com/kobakazu0429/jest-lite.git"
   },
   "keywords": [
     "jest",
@@ -17,7 +17,7 @@
     "lint:eslint": "eslint \"{src,test}/**/*.{js,ts}\" --fix",
     "lint:prettier": "prettier \"./{src,test}/**/*.{js,ts}\" --write"
   },
-  "author": "Koen Vendrik <k.vendrik@gmail.com>",
+  "author": "kobakazu0429",
   "license": "MIT",
   "dependencies": {
     "babel-runtime": "^6.26.0",
