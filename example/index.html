@@ -16,7 +16,10 @@
   </head>
   <body></body>
   <script>
-    const { describe, it, expect, run } = core;
+    const {
+      core: { describe, it, expect, run },
+      prettify,
+    } = window.jestLite;
 
     function sum(a, b) {
       return a + b;

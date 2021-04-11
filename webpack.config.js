@@ -31,9 +31,7 @@ module.exports = {
   ],
   output: {
     filename: `[name].min.js`,
-    library: '',
-    libraryExport: '',
+    library: 'jestLite',
     libraryTarget: 'umd',
-    globalObject: 'this',
-  }
+  },
 };
