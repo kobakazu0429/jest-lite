@@ -2,12 +2,7 @@
   "name": "jest-lite",
   "version": "1.0.0-alpha.4",
   "description": "Run Jest in the browser",
-  "source": "src/index.ts",
   "main": "dist/index.js",
-  "exports": "./dist/index.modern.js",
-  "module": "dist/index.module.js",
-  "unpkg": "dist/index.umd.js",
-  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/kvendrik/jest-lite.git"
@@ -17,7 +12,7 @@
     "browser"
   ],
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "lint:eslint": "eslint \"{src,test}/**/*.{js,ts}\" --fix",
     "lint:prettier": "prettier \"./{src,test}/**/*.{js,ts}\" --write"
@@ -25,15 +20,14 @@
   "author": "Koen Vendrik <k.vendrik@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "enzyme": "^3.10.0",
+    "babel-runtime": "^6.26.0",
     "jest-circus": "22.1.4",
-    "jest-matchers": "^20.0.3",
-    "jest-mock": "^24.8.0"
+    "jest-matchers": "20.0.3",
+    "jest-mock": "24.8.0"
   },
   "devDependencies": {
     "@jest/types": "^26.6.2",
     "@kobakazu0429/eslint-config-typescript": "^2.0.1",
-    "@types/enzyme": "^3.10.1",
     "eslint": "^7.22.0",
     "html-webpack-plugin": "^4.5.2",
     "ts-loader": "^8.0.18",
