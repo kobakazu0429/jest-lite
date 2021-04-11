@@ -5,8 +5,6 @@
 
 # jest-lite
 
-[![CircleCI](https://circleci.com/gh/kvendrik/jest-lite.svg?style=svg)](https://circleci.com/gh/kvendrik/jest-lite)
-[![NPM Version](https://badge.fury.io/js/jest-lite.svg)](https://yarnpkg.com/en/package/jest-lite)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Run [Jest](https://jestjs.io/) in the browser.
@@ -58,14 +56,14 @@ The `core` module spits out the test results in JSON format. This module gives y
 Check out this example on [RunKit](https://runkit.com/embed/aqlmbjboctrk).
 
 ```ts
-import {describe, it, expect, run} from 'jest-lite';
+import { describe, it, expect, run } from "jest-lite";
 
 function sum(x: number, y: number) {
   return x + y;
 }
 
-describe('sum', () => {
-  it('adds the two given numbers', () => {
+describe("sum", () => {
+  it("adds the two given numbers", () => {
     expect(sum(2, 2)).toBe(4);
   });
 });
@@ -112,18 +110,18 @@ Check out this example on [Codepen](https://codepen.io/kvendrik/pen/QeWLMV).
 ></script>
 <script>
   const {
-    core: {describe, it, expect, run},
-    enzyme: {mount},
+    core: { describe, it, expect, run },
+    enzyme: { mount },
     prettify,
   } = window.jestLite;
 
-  function Button({children}) {
-    return React.createElement('button', null, children);
+  function Button({ children }) {
+    return React.createElement("button", null, children);
   }
 
-  describe('<Button />', () => {
-    it('renders children', () => {
-      const text = 'Click me!';
+  describe("<Button />", () => {
+    it("renders children", () => {
+      const text = "Click me!";
       // If you're using a transpiler like Babel
       // React.createElement would be replaced with your JSX:
       // <Button>{text}</Button>
@@ -131,14 +129,14 @@ Check out this example on [Codepen](https://codepen.io/kvendrik/pen/QeWLMV).
       expect(button.text()).toBe(text);
     });
 
-    it('renders as a link', () => {
+    it("renders as a link", () => {
       const button = mount(React.createElement(Button, {}, null));
-      expect(button.find('a').exists()).toBe(true);
+      expect(button.find("a").exists()).toBe(true);
     });
 
-    it('renders as a button', () => {
+    it("renders as a button", () => {
       const button = mount(React.createElement(Button, {}, null));
-      expect(button.find('button').exists()).toBe(true);
+      expect(button.find("button").exists()).toBe(true);
     });
   });
 
