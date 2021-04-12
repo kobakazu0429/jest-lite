@@ -1,3 +1,4 @@
+// @ts-ignore
 import { ROOT_DESCRIBE_BLOCK_NAME } from "jest-circus/build/state";
 import type { Circus } from "@jest/types";
 

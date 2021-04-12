@@ -1,5 +1,5 @@
 {
-  "name": "jest-lite",
+  "name": "@kobakazu0429/jest-lite",
   "version": "1.0.1",
   "description": "Run Jest in the browser",
   "main": "dist/index.js",
