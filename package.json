@@ -2,7 +2,7 @@
   "name": "jest-lite",
   "version": "1.0.1",
   "description": "Run Jest in the browser",
-  "main": "dist/main.min.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/kobakazu0429/jest-lite.git"
@@ -28,8 +28,8 @@
   "devDependencies": {
     "@jest/types": "^26.6.2",
     "@kobakazu0429/eslint-config-typescript": "^2.0.1",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
     "eslint": "^7.22.0",
-    "html-webpack-plugin": "^4.5.2",
     "ts-loader": "^8.0.18",
     "typescript": "^4.2.3",
     "webpack": "^4.46.0",

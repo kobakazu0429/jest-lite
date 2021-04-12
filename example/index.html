@@ -14,27 +14,29 @@
       }
     </style>
   </head>
-  <body></body>
-  <script>
-    const {
-      core: { describe, it, expect, run },
-      prettify,
-    } = window.jestLite;
+  <body>
+    <script src="../dist/index.js"></script>
+    <script>
+      const {
+        core: { describe, it, expect, run },
+        prettify,
+      } = window.jestLite;
 
-    function sum(a, b) {
-      return a + b;
-    }
+      function sum(a, b) {
+        return a + b;
+      }
 
-    describe("sum(a, b)", () => {
-      it("sum(1, 2) should be 3", () => {
-        expect(sum(1, 2)).toBe(3);
+      describe("sum(a, b)", () => {
+        it("sum(1, 2) should be 3", () => {
+          expect(sum(1, 2)).toBe(3);
+        });
+
+        it("sum(1, -1) should be 0", () => {
+          expect(sum(1, -1)).toBe(0);
+        });
       });
 
-      it("sum(1, -1) should be 0", () => {
-        expect(sum(1, -1)).toBe(0);
-      });
-    });
-
-    prettify.toHTML(run(), document.body);
-  </script>
+      prettify.toHTML(run(), document.body);
+    </script>
+  </body>
 </html>

@@ -1,9 +1,11 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 "use strict";
 
-const path = require("path");
-const HTMLPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
+  mode: "production",
+
   module: {
     rules: [
       {
@@ -24,14 +26,10 @@ module.exports = {
     fs: "empty",
     module: "empty",
   },
-  plugins: [
-    new HTMLPlugin({
-      template: path.join(__dirname, "example/index.html"),
-    }),
-  ],
+  plugins: [new CleanWebpackPlugin()],
   output: {
-    filename: `[name].min.js`,
-    library: 'jestLite',
-    libraryTarget: 'umd',
+    filename: "index.js",
+    library: "jestLite",
+    libraryTarget: "umd",
   },
 };

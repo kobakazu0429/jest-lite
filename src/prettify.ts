@@ -1,5 +1,5 @@
 import { ROOT_DESCRIBE_BLOCK_NAME } from "jest-circus/build/state";
-import { Circus } from "@jest/types";
+import type { Circus } from "@jest/types";
 
 type Status = "pass" | "fail";
 
@@ -16,7 +16,7 @@ export function toHTML(
   });
 }
 
-function constructResultsHTML(result: Circus.TestResults) {
+export function constructResultsHTML(result: Circus.TestResults) {
   let totalDuration = 0;
   let passed = 0;
   let failed = 0;

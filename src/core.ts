@@ -1,3 +1,4 @@
+import "babel-runtime/regenerator";
 import expect from "jest-matchers";
 import jestMock from "jest-mock";
 import { addEventHandler } from "jest-circus/build/state";

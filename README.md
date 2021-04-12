@@ -31,15 +31,6 @@ All core testing utilities. ([source](https://github.com/kvendrik/jest-lite/blob
 - NPM: `import * as core from 'jest-lite';`
 - CDN: `http://unpkg.com/jest-lite@1.0.0-alpha.4/dist/core.js`
 
-### `enzyme`
-
-Testing utilities for testing with [Enzyme](https://github.com/airbnb/enzyme). ([source](https://github.com/kvendrik/jest-lite/blob/master/src/enzyme.ts)) (`180kb` gzipped)
-
-To be able to use this module you will need to include [your preferred version of React and ReactDOM](https://reactjs.org/docs/cdn-links.html).
-
-- NPM: `import * as enzyme from 'jest-lite/dist/enzyme';`
-- CDN: `http://unpkg.com/jest-lite@1.0.0-alpha.4/dist/enzyme.js`
-
 ### `prettify`
 
 The `core` module spits out the test results in JSON format. This module gives you an easy way to prettify that output for use on a HTML page. ([source](https://github.com/kvendrik/jest-lite/blob/master/src/prettify.ts))
