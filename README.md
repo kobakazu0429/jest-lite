@@ -11,7 +11,7 @@ Thanks [kvendrik/jest-lite](https://github.com/kvendrik/jest-lite)
 
 Run [Jest](https://jestjs.io/) in the browser.
 
-[<img src="https://github.com/kvendrik/jest-lite/raw/master/preview.png" width="100%" />](https://codepen.io/kvendrik/pen/QeWLMV)
+[<img src="https://github.com/kobakazu0429/jest-lite/raw/master/preview.png" width="100%" />](https://codepen.io/kvendrik/pen/QeWLMV)
 
 ## Why create this?
 
