@@ -1,6 +1,6 @@
 {
   "name": "@kobakazu0429/jest-lite",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Run Jest in the browser",
   "main": "dist/index.js",
   "repository": {
